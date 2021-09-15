@@ -1,0 +1,19 @@
+//1-2512
+
+
+// Math.floor(Math.random() * 10) + 1
+
+function NextArray(seed,seed_size){
+	
+	let arr=[]
+	
+	for (let i = 0; i < seed_size; i++) {
+		arr.push(seed+i)
+	}
+	
+	
+	return arr
+}
+
+
+console.log(NextArray(5))

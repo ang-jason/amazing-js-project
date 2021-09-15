@@ -1,0 +1,41 @@
+//1-2512
+
+
+// Math.floor(Math.random() * 10) + 1
+
+//////////////////////////////////////////////////////////////////////////
+// This is Next function array		//////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+function NextArray(seed, seedSize) {
+  let arr = [];
+  let endNumber;
+  
+  	// additional stuff
+  // seed=comicMinMax(seed)
+  console.log("seeed",seed)
+  if (seed ==0){
+	  seed = 1
+  }
+  	// additional stuff
+  if ((seed-comicNumber) && (seed >= comicMax)){
+	  arr.push(comicMax)
+	  for (i=1;i< parseInt(seedSize);i++)
+	  {
+		  arr.push(i)
+		  endNumber = i;
+	  }
+	      
+	return [arr, endNumber];
+  }
+  
+  for (let i = 0; i < seedSize; i++) {
+	  
+    arr.push(parseInt(seed) + i);
+    endNumber = parseInt(seed) + i;
+  }
+
+  return [arr, endNumber];
+}
+
+
+console.log(NextArray(5,5))

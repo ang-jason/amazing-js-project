@@ -1,0 +1,83 @@
+//1-2512
+
+
+// Math.floor(Math.random() * 10) + 1
+
+//////////////////////////////////////////////////////////////////////////
+// This is Next function array		//////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+function NextArray(seed, seedSize) {
+  let arr = [];
+  let endNumber;
+
+  // additional stuff
+  // seed=comicMinMax(seed)
+  console.log("seeed", seed);
+  if (seed == 0) {
+    seed = 1;
+  }
+  // additional stuff
+  console.log("stage 1");
+  console.log(
+    "TESTER",
+    comicMax - comicNumber <= seed,
+    seed < comicMax + comicNumber
+  );
+  if (
+    seed >= comicMax &&
+    comicMax - comicNumber <= seed &&
+    seed < comicMax + comicNumber
+  ) {
+    if (comicMax - comicNumber <= seed &&
+      seed < comicMax + comicNumber) {
+      arr.push(comicMax);
+    }
+    for (let i = 1; i < parseInt(seedSize); i++) {
+      console.log("stage 1A");
+      arr.push(i);
+      endNumber = i;
+    }
+
+    return [arr, endNumber];
+  }
+  console.log("stage 2");
+  for (let i = 0; i < seedSize; i++) {
+    arr.push(parseInt(seed) + i);
+    endNumber = parseInt(seed) + i;
+  }
+
+  return [arr, endNumber];
+}
+
+
+console.log(NextArray(5,5))
+
+
+
+//////////////////////////////////////////////////////////////////////////
+// This is Prev function array		//////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+function PrevArray(seed, seedSize) {
+  let arr = [];
+  let startNumber;
+
+  // additional stuff
+  if (seed >= comicMax || seed <= 1) {
+    // arr.push(1)
+    console.log("stage1");
+    for (let i = seedSize; i > 0; i--) {
+      arr.push(comicMax - i+1);
+      console.log(seed - i);
+    }
+    startNumber = comicMax - seedSize;
+    return [arr, startNumber];
+  }
+  console.log("stage2");
+  for (let i = seedSize; i > 0; i--) {
+    if (i == seedSize) startNumber = seed - i;
+    //console.log("i", i);
+    arr.push(seed - i);
+    console.log(seed - i);
+  }
+  return [arr, startNumber];
+}

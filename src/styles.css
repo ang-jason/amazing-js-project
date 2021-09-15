@@ -1,0 +1,226 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+/* COLOUR SCHEME by https://mycolor.space/?hex=%23845EC2&sub=1 */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #B0A8B9;
+  /* background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
+  
+	/* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);	 */
+}
+
+input {
+	background-color: #B0A8B9;
+	border: 2px solid #4B4453;
+	border-radius: 4px;
+	width: 10%;
+	height: 45px;
+	font-size:24px;
+	font-weight: bold;
+	vertical-align: middle;
+	/* color: #B0A8B9; */
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input:focus {
+  border: 1px solid #FF8066;
+}
+
+
+
+h1 {
+	
+	color: #C34A36;
+}
+
+
+
+.navarea{
+	
+	text-align: center;
+	
+}
+
+
+
+
+/* Buttons CSS */
+
+.button {
+  background-color: #845EC2;
+  /* border: none; */
+  border: 2px solid #4B4453; /* Green */
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span.right:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span.right {
+  padding-right: 25px;
+}
+
+.button:hover span.right:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button span.left:after {
+  content: '\00ab';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span.left {
+  padding-left: 25px;
+}
+
+
+
+.button:hover span.left:after {
+  opacity: 1;
+  left: 0;
+}
+
+
+
+.button span.middle {
+	text-align: center;
+	font-size: 16px;
+	opacity: 1;
+	cursor: pointer;
+}
+
+.button:hover span.middle{
+	opacity: 0.5
+	}
+
+/* Gallery CSS */
+
+
+.flex-container {
+    display: flex;
+	width: 100%; 
+}
+
+.flex-child {
+    /* flex: 1; */
+    /* border: 2px solid yellow; */
+	 margin: 10px;
+}  
+
+.flex-child:first-child {
+    /* margin: 10px; */
+} 
+
+.comic{
+
+  text-align: center;
+}
+
+
+.comic img {
+  width: 100%;
+
+}
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 600px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.imgdesc {
+  padding: 15px;
+  /* text-align: center; */
+}
+div.imgtitle {
+  font-weight: bold;
+  padding: 15px;
+  /* text-align: center; */
+}
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* for loader indicator */
+.loader {
+  width: 50%;
+  margin: 0 auto;
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #07CCF6; /* Blue */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

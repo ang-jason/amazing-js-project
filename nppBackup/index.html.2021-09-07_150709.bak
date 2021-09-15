@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+	<link rel="stylesheet" href="src/styles.css">
+  </head>
+
+  <body>
+		<div id="app"></div>
+		<input type="number" id="go_number_field" min="1" max="2475">
+		&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" id="go_number_button"> GO></button>
+		<div id="result">...</div>
+	</br>
+	</br>
+	<a href="#" class="button">1</a>
+	<a href="#" class="button">3</a>
+	<a href="#" class="button">5</a>
+
+
+	</br>
+    <button type="button" id="buttonPrev">< PREV</button>&nbsp;&nbsp;
+    <button type="button" id="buttonRan">RANDOM</button>&nbsp;&nbsp;
+	<button type="button" id="buttonNext"><span>NEXT ></button></br>
+		<div class="gallery clearfix"
+		<div class="gallery">
+			<!-- <a target="_blank" id="img1_href" href="https://www.w3schools.com/css/img_5terre.jpg"> -->
+				<img id="img1" src="https://imgs.xkcd.com/comics/bill_nye.png" alt="Cinque Terre" >
+				<div hidden class="loader"></div>
+				<!-- </a> -->
+				<div id="num1"></div>
+				<div class="imgtitle" id="imgtitle1"></div>
+			<div class="imgdesc" id="desc1">Add a description of the image here</div>
+		</div>
+		
+		<div class="gallery">
+			<!-- <a target="_blank" href="https://www.w3schools.com/css/img_forest.jpg"> -->
+				<img src="https://imgs.xkcd.com/comics/christmas_gps.png" alt="Forest">
+			<!-- </a> -->
+			<div hidden class="loader"></div>
+			<div class="imgdesc">Add a description of the image here</div>
+		</div>
+		</div>
+		<div class="gallery">
+			<!-- <a target="_blank" href="https://www.w3schools.com/css/img_lights.jpg"> -->
+				<img src="https://imgs.xkcd.com/comics/youtube.png" alt="Northern Lights" >
+			<!-- </a> -->
+			<div class="imgdesc">Add a description of the image here</div>
+		</div>
+		<div class="gallery">
+			<!-- <a target="_blank" href="https://www.w3schools.com/css/img_lights.jpg"> -->
+				<img src="https://imgs.xkcd.com/comics/hallucinations.png" alt="Northern Lights" >
+			<!-- </a> -->
+			<div class="imgdesc">Add a description of the image here</div>
+		</div>
+		<div class="gallery">
+			<!-- <a target="_blank" href="https://www.w3schools.com/css/img_lights.jpg"> -->
+				<img src="https://imgs.xkcd.com/comics/america.png" alt="Northern Lights" >
+			<!-- </a> -->
+			<div class="imgdesc">Add a description of the image here</div>
+		</div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

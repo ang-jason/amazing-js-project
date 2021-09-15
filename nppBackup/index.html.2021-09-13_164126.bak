@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>xkcd Comic Reader</title>
+    <meta charset="UTF-8" />
+	<link rel="stylesheet" href="src/styles.css">
+  </head>
+
+  <body>
+  
+		<div id="app"></div>
+		<input type="number" id="goNumber" min="1" max="2475">
+		&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" id="goButton"> GO></button>
+		<div id="result">...</div>
+	</br>
+	</br>
+	<a href="#" class="button" value="1" id="btn1comic">1</a>
+	<a href="#" class="button" value="3" id="btn3comic">3</a>
+	<a href="#" class="button" value="5" id="btn5comic">5</a>
+
+
+	</br>
+	<button class="button" id="buttonPrev"><span class="left">PREV</span></button>
+	<button class="button" id="buttonRan"><span class="middle">RANDOM</span></button>
+	<button class="button" id="buttonNext"><span class="right">NEXT</span></button>
+    <!-- <button type="button" id="buttonPrev">< PREV</button>&nbsp;&nbsp; -->
+    <!-- <button type="button" id="buttonRan">RANDOM</button>&nbsp;&nbsp; -->
+	<!-- <button type="button" id="buttonNext"><span>NEXT ></button></br> -->
+
+		<div class="flex-container" id="gallery-container">
+		<!-- this is first child -->
+		<div class="flex-child"> 
+				<div class="comic">
+				<!-- <a target="_blank" id="img1_href" href="https://www.w3schools.com/css/img_5terre.jpg"> -->
+					<div hidden class="loader"></div>
+					<img id="img" src="https://imgs.xkcd.com/comics/bill_nye.png" alt="Cinque Terre" >
+					<!-- </a> -->
+					<h3 class="imgtitle"></h3><div id="num"></div>
+				<div class="imgdesc" id="desc">Add a description of the image here1</div>
+			</div>
+		</div>
+		<!-- this is 2nd child -->
+		<div class="flex-child">
+			<div class="comic">
+				<!-- <a target="_blank" id="img1_href" href="https://www.w3schools.com/css/img_5terre.jpg"> -->
+					<div hidden class="loader"></div>
+					<img id="img" src="https://imgs.xkcd.com/comics/bill_nye.png" alt="Cinque Terre" >
+					<!-- </a> -->
+					<div class="imgtitle"></div><div id="num"></div>
+				<div class="imgdesc" id="desc">Add a description of the image here2</div>
+			</div>
+		</div>
+		<!-- this is 3rd child -->
+		<div class="flex-child">
+			<div class="comic">
+				<!-- <a target="_blank" id="img1_href" href="https://www.w3schools.com/css/img_5terre.jpg"> -->
+					<div hidden class="loader"></div>
+					<img id="img" src="https://imgs.xkcd.com/comics/bill_nye.png" alt="Cinque Terre" >
+
+					<!-- </a>  -->
+					<h3 class="imgtitle"></h3><div id="num"></div>
+				<div class="imgdesc" id="desc">Add a description of the image here3</div>
+			</div>
+		</div>
+		</div>	
+
+    <script src="src/index.js"></script>
+
+  </body>
+</html>
