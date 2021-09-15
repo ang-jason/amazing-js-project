@@ -251,9 +251,9 @@ function NextArray(seed, seedSize) {
     "TESTER",
     seed >= comicMax,
     comicMax - comicNumber <= seed,
-    seed < comicMax + comicNumber
+    seed < parseInt(comicMax) + comicNumber
   );
-  if (comicMax - comicNumber <= seed && seed < comicMax + comicNumber) {
+  if (comicMax - comicNumber <= seed && seed < parseInt(comicMax) + comicNumber) {
     for (let i = 0; i < parseInt(seedSize); i++) {
       console.log("i", i);
       console.log("stage 1A");
@@ -294,7 +294,7 @@ const onNextClick = () => {
 	console.log("from onClickNext")
 	//console.log(urlBase);
 	console.log("currentNumber BEFORE",currComicNumber)
-	currComicNumber=currComicNumber+comicNumber
+	currComicNumber=parseInt(currComicNumber)+comicNumber
 	console.log("currentNumber AFTER",currComicNumber)
 	
 	nexArray=NextArray(currComicNumber,comicNumber)
