@@ -126,7 +126,7 @@ function randomArray(seedSize) {
   let arr = [];
   for (let i = 0; i < seedSize; i++) {
     //1-2512
-    arr.push(parseInt(Math.floor(Math.random() * comicMax)) + parseInt(1));
+    arr.push(Math.floor(Math.random() * comicMax) + 1);
   }
   return arr;
 }
@@ -251,14 +251,14 @@ function NextArray(seed, seedSize) {
     "TESTER",
     seed >= comicMax,
     comicMax - comicNumber <= seed,
-    seed < parseInt(comicMax) + parseInt(comicNumber)
+    seed < parseInt(comicMax) + comicNumber
   );
-  if (comicMax - comicNumber <= seed && seed < parseInt(comicMax) + parseInt(comicNumber)) {
+  if (comicMax - comicNumber <= seed && seed < parseInt(comicMax) + comicNumber) {
     for (let i = 0; i < parseInt(seedSize); i++) {
       console.log("i", i);
       console.log("stage 1A");
       console.log("seed", parseInt(seed));
-      if (parseInt(seed) + parseInt(i) > comicMax) {
+      if (parseInt(seed) + i > comicMax) {
         console.log("length of arr", arr.length);
         console.log("less arr", comicNumber - arr.length);
         let arrCondloop = comicNumber - arr.length + 1;
@@ -271,7 +271,7 @@ function NextArray(seed, seedSize) {
         }
         return [arr, endNumber];
       } else {
-        arr.push(parseInt(seed) + parseInt(i));
+        arr.push(parseInt(seed) + i);
       }
 
       endNumber = i;
@@ -281,8 +281,8 @@ function NextArray(seed, seedSize) {
   }
   console.log("stage 2");
   for (let i = 0; i < seedSize; i++) {
-    arr.push(parseInt(seed) + parseInt(i));
-    endNumber = parseInt(seed) + parseInt(i);
+    arr.push(parseInt(seed) + i);
+    endNumber = parseInt(seed) + i;
   }
 
   return [arr, endNumber];
@@ -293,8 +293,8 @@ const onNextClick = () => {
 	
 	console.log("from onClickNext")
 	//console.log(urlBase);
-	console.log("currentNumber BEFORE next parseInt",currComicNumber)
-	currComicNumber=parseInt(currComicNumber)+parseInt(comicNumber)
+	console.log("currentNumber BEFORE",currComicNumber)
+	currComicNumber=parseInt(currComicNumber)+comicNumber
 	console.log("currentNumber AFTER",currComicNumber)
 	
 	nexArray=NextArray(currComicNumber,comicNumber)
