@@ -17,7 +17,7 @@ const comicMax = 2512
 //let url_pass = "https://intro-to-js-playground.vercel.app/api/xkcd-comics/600";
 
 
-
+let directionFlag=0;
 
 //////////////////////////////////////////////////////////////////////////
 // for fetching of API			//////////////////////////////////////////
@@ -191,7 +191,7 @@ function refreshComic(specialSeed=0){
 	console.log("startingSeed",startingSeed)
 	
 	refreshArr=NextArray(startingSeed,comicNumber)
-	currComicNumber=refreshArr[1]-1;
+	currComicNumber=refreshArr[1]+parseInt(1)
 	// let refreshArr=[]
 
 	// for (let i=0 ; i<gallery.length; i++)
@@ -209,7 +209,7 @@ const onRandomClick = () => {
 	console.log("from onClickRandom")
 	//console.log(urlBase);
 	ranArray=randomArray(comicNumber)
-	currComicNumber=ranArray[0]
+	currComicNumber=ranArray[0]+parseInt(1)
 	console.log("currComicNumber",currComicNumber)
 	
 	console.log("ranArray",ranArray)
@@ -293,17 +293,39 @@ const onNextClick = () => {
 	
 	console.log("from onClickNext")
 	//console.log(urlBase);
+
 	console.log("currentNumber BEFORE next parseInt",currComicNumber)
-	currComicNumber=parseInt(currComicNumber)+parseInt(comicNumber)
-	console.log("currentNumber AFTER",currComicNumber)
+	// currComicNumber=parseInt(currComicNumber)+parseInt(comicNumber)
+	// console.log("currentNumber AFTER",currComicNumber)
 	
-	nexArray=NextArray(currComicNumber,comicNumber)
-	// currComicNumber=nexArray[1]+1;
+	// set direction flag
+	// directionFlag="forward";
+	console.log("directionFlag",directionFlag)
+
+	if (directionFlag=="backward")
+	{
+		currComicNumber = parseInt(currComicNumber) + parseInt(comicNumber)
+	}
+	
+	// set direction flag	
+	directionFlag="forward";
+
+
+	
+	nexArray=NextArray(parseInt(currComicNumber),comicNumber)
+	currComicNumber=nexArray[1]+parseInt(1);
+	
+	console.log("currentNumber After entry",currComicNumber)
 	
 	console.log(nexArray)
 
 	comicSetup(nexArray[0]);	
 	
+	
+	
+
+	
+
 };
 
 //////////////////////////////////////////////////////////////////////////
@@ -366,6 +388,20 @@ const onPrevClick = () => {
 	console.log("currentNumber BEFORE1",currComicNumber)
 	// currComicNumber=currComicNumber
 	// console.log("currentNumber BEFORE2",currComicNumber)
+	
+	
+	// direction flag
+	console.log("directionFlag",directionFlag)
+	if (directionFlag=="forward")
+	{
+		currComicNumber = parseInt(currComicNumber) - parseInt(comicNumber)
+
+	}
+	
+	// direction flag	
+	directionFlag="backward"	
+	
+	
 	preArray=PrevArray(currComicNumber,comicNumber)
 	currComicNumber=preArray[1];
 	// console.log("currentNumber AFTER",currComicNumber)
