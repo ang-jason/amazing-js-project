@@ -208,6 +208,18 @@ function refreshComic(specialSeed=0){
 	console.log("refreshArr",refreshArr)
 	comicSetup(refreshArr[0]);
 
+	console.log("directionFlag",directionFlag)
+
+	// if (directionFlag=="backward")
+	// {
+		// currComicNumber = parseInt(currComicNumber) + parseInt(comicNumber)
+	// }
+	
+	// set direction flag	
+	directionFlag="forward";
+
+
+
 }
 
 const onRandomClick = () => {
