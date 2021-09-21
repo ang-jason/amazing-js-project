@@ -103,7 +103,7 @@ function goEvent() {
   if (goNumber<=0)
   {
 	alert(`Number invalid, please enter again`);
-	onRandomClick()
+	return onRandomClick()
   }
   
   
@@ -113,7 +113,7 @@ function goEvent() {
   }
   currComicNumber=goNumber
   
-  refreshComic(currComicNumber)
+  return refreshComic(currComicNumber)
   // document.querySelector("#result").innerHTML = goNumber;
 
 }
