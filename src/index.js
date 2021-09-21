@@ -14,8 +14,7 @@ let comicNumber = 3;
 let currComicNumber = 1;
 
 const comicMax = 2512
-//let url_pass = "https://intro-to-js-playground.vercel.app/api/xkcd-comics/600";
-
+//let urlPass = "https://intro-to-js-playground.vercel.app/api/xkcd-comics/600";
 
 let directionFlag=0;
 
@@ -101,6 +100,13 @@ function goEvent() {
   let goNumber = bGofield.value;
   console.log(goNumber);
   // document.querySelector("#result").innerHTML = goNumber;
+  if (goNumber<=0)
+  {
+	alert(`Number invalid, please enter again`);
+	onRandomClick()
+  }
+  
+  
   if (goNumber > comicMax){
 	alert(`Number invalid, please enter again (< ${comicMax})`);
 	goNumber=comicMax

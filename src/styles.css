@@ -131,6 +131,7 @@ h1 {
 .flex-container {
     display: flex;
 	width: 100%; 
+
 	justify-content: center;
 }
 
@@ -181,24 +182,15 @@ div.imgtitle {
   padding: 15px;
   /* text-align: center; */
 }
-.responsive {
-  padding: 0 6px;
-  float: left;
-  width: 24.99999%;
-}
 
-@media only screen and (max-width: 700px) {
-  .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
   }
 }
 
-@media only screen and (max-width: 500px) {
-  .responsive {
-    width: 100%;
-  }
-}
 
 .clearfix:after {
   content: "";
